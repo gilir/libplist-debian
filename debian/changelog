@@ -1,0 +1,30 @@
+libplist (0.13-2) unstable; urgency=low
+
+  * Orphan package.
+
+ -- Bradley Smith <bradsmith@debian.org>  Sun, 27 Sep 2009 14:56:07 +0100
+
+libplist (0.13-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Bradley Smith <bradsmith@debian.org>  Sun, 27 Sep 2009 14:43:59 +0100
+
+libplist (0.12-2) unstable; urgency=low
+
+  * Correctly install plutil. Closes: #531269.
+
+ -- Bradley Smith <bradsmith@debian.org>  Sun, 31 May 2009 11:06:53 +0100
+
+libplist (0.12-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add watch file.
+
+ -- Bradley Smith <bradsmith@debian.org>  Tue, 12 May 2009 18:07:42 +0100
+
+libplist (0.10-1) experimental; urgency=low
+
+  * Initial release. Closes: #523926.
+
+ -- Bradley Smith <bradsmith@debian.org>  Mon, 13 Apr 2009 18:29:42 +0100
