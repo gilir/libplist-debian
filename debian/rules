@@ -55,10 +55,10 @@ binary-arch: build install
 	dh_installman
 	dh_install --fail-missing
 	dh_link
-	dh_strip --dbg-package=libplist0-dbg
+	dh_strip --dbg-package=libplist-dbg
 	dh_compress
 	dh_fixperms
-	dh_pycentral
+	dh_pysupport
 	dh_makeshlibs
 	dh_installdeb
 	dh_shlibdeps

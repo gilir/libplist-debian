@@ -1,3 +1,31 @@
+libplist (0.16-1) unstable; urgency=low
+
+  * Adopt the package. Thanks Bradley Smith for his work. (Closes: #548594)
+  * New upstream release (Closes: #557554).
+  * debian/control:
+   - Add libplist++{0,-dev} binaries for the new library.
+   - Bump Standards-Version to 3.8.3, no changes needed.
+   - Build-depends on python-all-dev
+   - Switch to python-support.
+   - Add Conflicts/Replace for -dev packages, some headers moved to the new 
+     library.
+   - Remove Vcs-* field.
+   - Bump minimum version of swig to >= 1.3.36
+   - Change name of the -dbg package, it contains debug symbols for the 2 
+     libraries.
+   - Avoid dupplicated Descriptions field.
+   - Add a more verbose extended description (Closes: #530590)
+  * debian/*.install: Reorganize with the new library.
+  * debian/python-plist.install
+   - Replace site-packages by *-packages for python 2.6 migration. 
+     (Closes: #557822)
+  * debian/rules & python-plist.preinst:
+   - Switch to python-support and remove previous installed files by 
+     python-central.
+  * debian/plist.1 & debian/libplist-utils.man: Add a man page for plist.
+
+ -- Julien Lavergne <julien.lavergne@gmail.com>  Sun, 22 Nov 2009 13:51:02 -0600
+
 libplist (0.13-2) unstable; urgency=low
 
   * Orphan package.
