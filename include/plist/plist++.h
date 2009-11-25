@@ -1,8 +1,8 @@
 /*
- * plutil.h
- * header for plist convertion tool
+ * plist++.h
+ * Main include of libplist C++ binding
  *
- * Copyright (c) 2008 Zach C. All Rights Reserved.
+ * Copyright (c) 2009 Jonathan Beck All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,11 +19,20 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-typedef struct _options
-{
-    char *in_file, *out_file;
-    uint8_t debug, in_fmt, out_fmt;
-} Options;
+#ifndef LIBPLISTXX_H
+#define LIBPLISTXX_H
 
-Options *parse_arguments(int argc, char *argv[]);
-void print_usage();
+#include "plist.h"
+#include "Array.h"
+#include "Boolean.h"
+#include "Data.h"
+#include "Date.h"
+#include "Dictionary.h"
+#include "Integer.h"
+#include "Node.h"
+#include "Real.h"
+#include "String.h"
+#include "Structure.h"
+#include "Utils.h"
+
+#endif

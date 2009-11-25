@@ -1,8 +1,8 @@
 /*
- * plutil.h
- * header for plist convertion tool
+ * Structure.h
+ * Structure node type for C++ binding
  *
- * Copyright (c) 2008 Zach C. All Rights Reserved.
+ * Copyright (c) 2009 Jonathan Beck All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,11 +19,37 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-typedef struct _options
-{
-    char *in_file, *out_file;
-    uint8_t debug, in_fmt, out_fmt;
-} Options;
+#ifndef PLIST__STRUCTURE_H
+#define PLIST__STRUCTURE_H
 
-Options *parse_arguments(int argc, char *argv[]);
-void print_usage();
+#include <plist/Node.h>
+#include <string>
+#include <vector>
+
+namespace PList
+{
+
+class Structure : public Node
+{
+public :
+    virtual ~Structure();
+
+    uint32_t GetSize();
+
+    std::string ToXml();
+    std::vector<char> ToBin();
+
+    virtual void Remove(Node* node) = 0;
+
+protected:
+    Structure(Node* parent = NULL);
+    Structure(plist_type type, Node* parent = NULL);
+
+private:
+    Structure(Structure& s);
+    Structure& operator=(const Structure& s);
+};
+
+};
+
+#endif // PLIST__STRUCTURE_H

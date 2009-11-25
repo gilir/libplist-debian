@@ -1,8 +1,8 @@
 /*
- * plutil.h
- * header for plist convertion tool
+ * Date.h
+ * Date node type for C++ binding
  *
- * Copyright (c) 2008 Zach C. All Rights Reserved.
+ * Copyright (c) 2009 Jonathan Beck All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,11 +19,35 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-typedef struct _options
-{
-    char *in_file, *out_file;
-    uint8_t debug, in_fmt, out_fmt;
-} Options;
+#ifndef PLIST__DATE_H
+#define PLIST__DATE_H
 
-Options *parse_arguments(int argc, char *argv[]);
-void print_usage();
+#include <plist/Node.h>
+#include <ctime>
+
+#ifdef _MSC_VER
+#include <Winsock2.h>
+#endif
+
+namespace PList
+{
+
+class Date : public Node
+{
+public :
+    Date(Node* parent = NULL);
+    Date(plist_t node, Node* parent = NULL);
+    Date(Date& d);
+    Date& operator=(Date& d);
+    Date(timeval t);
+    virtual ~Date();
+
+    Node* Clone();
+
+    void SetValue(timeval t);
+    timeval GetValue();
+};
+
+};
+
+#endif // PLIST__DATE_H

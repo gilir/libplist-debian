@@ -1,8 +1,8 @@
 /*
- * plutil.h
- * header for plist convertion tool
+ * Boolean.h
+ * Boolean node type for C++ binding
  *
- * Copyright (c) 2008 Zach C. All Rights Reserved.
+ * Copyright (c) 2009 Jonathan Beck All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,11 +19,30 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-typedef struct _options
-{
-    char *in_file, *out_file;
-    uint8_t debug, in_fmt, out_fmt;
-} Options;
+#ifndef PLIST__BOOLEAN_H
+#define PLIST__BOOLEAN_H
 
-Options *parse_arguments(int argc, char *argv[]);
-void print_usage();
+#include <plist/Node.h>
+
+namespace PList
+{
+
+class Boolean : public Node
+{
+public :
+    Boolean(Node* parent = NULL);
+    Boolean(plist_t node, Node* parent = NULL);
+    Boolean(Boolean& b);
+    Boolean& operator=(Boolean& b);
+    Boolean(bool b);
+    virtual ~Boolean();
+
+    Node* Clone();
+
+    void SetValue(bool b);
+    bool GetValue();
+};
+
+};
+
+#endif // PLIST__BOOLEAN_H
