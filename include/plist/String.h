@@ -1,8 +1,8 @@
 /*
- * plutil.h
- * header for plist convertion tool
+ * String.h
+ * String node type for C++ binding
  *
- * Copyright (c) 2008 Zach C. All Rights Reserved.
+ * Copyright (c) 2009 Jonathan Beck All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,11 +19,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-typedef struct _options
-{
-    char *in_file, *out_file;
-    uint8_t debug, in_fmt, out_fmt;
-} Options;
+#ifndef PLIST__STRING_H
+#define PLIST__STRING_H
 
-Options *parse_arguments(int argc, char *argv[]);
-void print_usage();
+#include <plist/Node.h>
+#include <string>
+
+namespace PList
+{
+
+class String : public Node
+{
+public :
+    String(Node* parent = NULL);
+    String(plist_t node, Node* parent = NULL);
+    String(String& s);
+    String& operator=(String& s);
+    String(const std::string& s);
+    virtual ~String();
+
+    Node* Clone();
+
+    void SetValue(const std::string& s);
+    std::string GetValue();
+};
+
+};
+
+#endif // PLIST__STRING_H

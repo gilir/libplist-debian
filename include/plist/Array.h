@@ -1,8 +1,8 @@
 /*
- * plutil.h
- * header for plist convertion tool
+ * Array.h
+ * Array node type for C++ binding
  *
- * Copyright (c) 2008 Zach C. All Rights Reserved.
+ * Copyright (c) 2009 Jonathan Beck All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,11 +19,36 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-typedef struct _options
-{
-    char *in_file, *out_file;
-    uint8_t debug, in_fmt, out_fmt;
-} Options;
+#ifndef PLIST__ARRAY_H
+#define PLIST__ARRAY_H
 
-Options *parse_arguments(int argc, char *argv[]);
-void print_usage();
+#include <plist/Structure.h>
+#include <vector>
+
+namespace PList
+{
+
+class Array : public Structure
+{
+public :
+    Array(Node* parent = NULL);
+    Array(plist_t node, Node* parent = NULL);
+    Array(Array& a);
+    Array& operator=(Array& a);
+    virtual ~Array();
+
+    Node* Clone();
+
+    Node* operator[](unsigned int index);
+    void Append(Node* node);
+    void Insert(Node* node, unsigned int pos);
+    void Remove(Node* node);
+    void Remove(unsigned int pos);
+
+private :
+    std::vector<Node*> _array;
+};
+
+};
+
+#endif // PLIST__ARRAY_H

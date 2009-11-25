@@ -1,8 +1,8 @@
 /*
- * plutil.h
- * header for plist convertion tool
+ * Node.h
+ * Abstract node type for C++ binding
  *
- * Copyright (c) 2008 Zach C. All Rights Reserved.
+ * Copyright (c) 2009 Jonathan Beck All Rights Reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,11 +19,34 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-typedef struct _options
-{
-    char *in_file, *out_file;
-    uint8_t debug, in_fmt, out_fmt;
-} Options;
+#ifndef PLIST__NODE_H
+#define PLIST__NODE_H
 
-Options *parse_arguments(int argc, char *argv[]);
-void print_usage();
+#include <plist/plist.h>
+
+namespace PList
+{
+
+class Node
+{
+public :
+    virtual ~Node();
+
+    virtual Node* Clone() = 0;
+    Node * GetParent();
+    void SetParent(Node* parent);
+
+    plist_type GetType();
+    plist_t GetPlist();
+
+protected:
+    Node(Node* parent = NULL);
+    Node(plist_t node, Node* parent = NULL);
+    Node(plist_type type, Node* parent = NULL);
+    plist_t _node;
+    Node* _parent;
+};
+
+};
+
+#endif // PLIST__NODE_H
