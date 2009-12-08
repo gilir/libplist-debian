@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 7), libglib2.0-dev, libxml2-dev, cmake, swig (>= 1.
 XS-Python-Version: current
 Homepage: http://github.com/JonathanBeck/libplist
 
-Package: libplist0
+Package: libplist1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Library for handling Apple binary and XML property lists
@@ -15,7 +15,7 @@ Description: Library for handling Apple binary and XML property lists
  property lists format. It's part of the libiphone stack, providing access
  to Ipod and Iphone devices.
 
-Package: libplist++0
+Package: libplist++1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Library for handling Apple binary and XML property lists

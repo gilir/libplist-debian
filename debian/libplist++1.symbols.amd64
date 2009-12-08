@@ -1,4 +1,4 @@
-libplist++.so.0 libplist++0 #MINVER#
+libplist++.so.1 libplist++1 #MINVER#
  _ZN5PList10Dictionary3EndEv@Base 0.16
  _ZN5PList10Dictionary4FindERKSs@Base 0.16
  _ZN5PList10Dictionary5BeginEv@Base 0.16

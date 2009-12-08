@@ -1,3 +1,10 @@
+libplist (1.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+  * debian/libplist*.install & debian/control: Bump SONAME version. 
+
+ -- Julien Lavergne <gilir@ubuntu.com>  Tue, 08 Dec 2009 19:58:57 +0100
+
 libplist (0.16-1) unstable; urgency=low
 
   * Adopt the package. Thanks Bradley Smith for his work. (Closes: #548594)

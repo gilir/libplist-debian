@@ -1,4 +1,4 @@
-libplist.so.0 libplist0 #MINVER#
+libplist.so.1 libplist1 #MINVER#
  plist_access_path@Base 0.16
  plist_access_pathv@Base 0.16
  plist_add_sub_bool_el@Base 0.13
