@@ -28,7 +28,7 @@ Description: Library for handling Apple binary and XML property lists
 Package: libplist-dev
 Architecture: any
 Section: libdevel
-Depends: libplist0 (= ${binary:Version}), libxml2-dev, libglib2.0-dev, ${misc:Depends}
+Depends: libplist1 (= ${binary:Version}), libxml2-dev, libglib2.0-dev, ${misc:Depends}
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libiphone stack, providing access
@@ -39,7 +39,7 @@ Description: Library for handling Apple binary and XML property lists
 Package: libplist++-dev
 Architecture: any
 Section: libdevel
-Depends: libplist0 (= ${binary:Version}), libxml2-dev, libglib2.0-dev, ${misc:Depends}
+Depends: libplist1 (= ${binary:Version}), libxml2-dev, libglib2.0-dev, ${misc:Depends}
 Conflicts: libplist-dev (<= 0.13.2)
 Replaces: libplist-dev (<= 0.13.2)
 Description: Library for handling Apple binary and XML property lists
@@ -53,7 +53,7 @@ Package: libplist-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: libplist0 (= ${binary:Version}), libplist++0 (= ${binary:Version}), ${misc:Depends}
+Depends: libplist1 (= ${binary:Version}), libplist++1 (= ${binary:Version}), ${misc:Depends}
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libiphone stack, providing access
