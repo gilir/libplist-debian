@@ -7,7 +7,7 @@ libplist (1.0-1) UNRELEASED; urgency=low
   * debian/python-plist.install: Update to the new location.
   * debian/*.symbols: Add symbols files.
 
- -- Julien Lavergne <gilir@ubuntu.com>  Tue, 08 Dec 2009 19:58:57 +0100
+ -- Julien Lavergne <julien.lavergne@gmail.com>  Tue, 08 Dec 2009 19:58:57 +0100
 
 libplist (0.16-1) unstable; urgency=low
 
