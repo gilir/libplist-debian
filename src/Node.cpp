@@ -21,6 +21,14 @@
 #include <stdlib.h>
 #include <plist/Node.h>
 #include <plist/Structure.h>
+#include <plist/Dictionary.h>
+#include <plist/Array.h>
+#include <plist/Boolean.h>
+#include <plist/Integer.h>
+#include <plist/Real.h>
+#include <plist/String.h>
+#include <plist/Data.h>
+#include <plist/Date.h>
 
 namespace PList
 {
@@ -96,19 +104,44 @@ Node* Node::GetParent()
     return _parent;
 }
 
-void Node::SetParent(Node* parent)
+Node* Node::FromPlist(plist_t node, Node* parent)
 {
-    //Unlink node first
-    if ( NULL != _parent )
+    Node* ret = NULL;
+    if (node)
     {
-        plist_type type = plist_get_node_type(_parent);
-        if (PLIST_ARRAY ==type || PLIST_DICT == type )
+        plist_type type = plist_get_node_type(node);
+        switch (type)
         {
-            Structure* s = static_cast<Structure*>(_parent);
-            s->Remove(this);
+        case PLIST_DICT:
+            ret = new Dictionary(node, parent);
+            break;
+        case PLIST_ARRAY:
+            ret = new Array(node, parent);
+            break;
+        case PLIST_BOOLEAN:
+            ret = new Boolean(node, parent);
+            break;
+        case PLIST_UINT:
+            ret = new Integer(node, parent);
+            break;
+        case PLIST_REAL:
+            ret = new Real(node, parent);
+            break;
+        case PLIST_STRING:
+            ret = new String(node, parent);
+            break;
+        case PLIST_DATE:
+            ret = new Date(node, parent);
+            break;
+        case PLIST_DATA:
+            ret = new Data(node, parent);
+            break;
+        default:
+            plist_free(node);
+            break;
         }
     }
-    _parent = parent;
+    return ret;
 }
 
 };

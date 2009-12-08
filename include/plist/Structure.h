@@ -41,9 +41,13 @@ public :
 
     virtual void Remove(Node* node) = 0;
 
+    static Structure* FromXml(const std::string& xml);
+    static Structure* FromBin(const std::vector<char>& bin);
+
 protected:
     Structure(Node* parent = NULL);
     Structure(plist_type type, Node* parent = NULL);
+    void UpdateNodeParent(Node* node);
 
 private:
     Structure(Structure& s);

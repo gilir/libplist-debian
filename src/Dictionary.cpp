@@ -20,7 +20,6 @@
 
 #include <stdlib.h>
 #include <plist/Dictionary.h>
-#include <plist/Utils.h>
 
 namespace PList
 {
@@ -40,7 +39,7 @@ Dictionary::Dictionary(plist_t node, Node* parent) : Structure(parent)
     plist_dict_next_item(_node, it, &key, &subnode);
     while (subnode)
     {
-        _map[std::string(key)] = Utils::FromPlist(subnode, this);
+        _map[std::string(key)] = Node::FromPlist(subnode, this);
 
         subnode = NULL;
         free(key);
@@ -68,7 +67,7 @@ Dictionary::Dictionary(PList::Dictionary& d) : Structure()
     plist_dict_next_item(_node, it, &key, &subnode);
     while (subnode)
     {
-        _map[std::string(key)] = Utils::FromPlist(subnode, this);
+        _map[std::string(key)] = Node::FromPlist(subnode, this);
 
         subnode = NULL;
         free(key);
@@ -96,7 +95,7 @@ Dictionary& Dictionary::operator=(PList::Dictionary& d)
     plist_dict_next_item(_node, it, &key, &subnode);
     while (subnode)
     {
-        _map[std::string(key)] = Utils::FromPlist(subnode, this);
+        _map[std::string(key)] = Node::FromPlist(subnode, this);
 
         subnode = NULL;
         free(key);
@@ -111,7 +110,6 @@ Dictionary::~Dictionary()
 {
     for (Dictionary::iterator it = _map.begin(); it != _map.end(); it++)
     {
-        plist_free(it->second->GetPlist());
         delete it->second;
     }
     _map.clear();
@@ -147,7 +145,7 @@ Dictionary::iterator Dictionary::Insert(const std::string& key, Node* node)
     if (node)
     {
         Node* clone = node->Clone();
-        clone->SetParent(this);
+        UpdateNodeParent(clone);
         plist_dict_insert_item(_node, key.c_str(), clone->GetPlist());
         delete _map[key];
         _map[key] = clone;
@@ -175,6 +173,16 @@ void Dictionary::Remove(const std::string& key)
     plist_dict_remove_item(_node, key.c_str());
     delete _map[key];
     _map.erase(key);
+}
+
+std::string Dictionary::GetNodeKey(Node* node)
+{
+    for (iterator it = _map.begin(); it != _map.end(); ++it)
+    {
+        if (it->second == node)
+            return it->first;
+    }
+    return "";
 }
 
 };
