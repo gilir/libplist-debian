@@ -1,14 +1,6 @@
 libplist.so.1 libplist1 #MINVER#
  plist_access_path@Base 0.16
  plist_access_pathv@Base 0.16
- plist_add_sub_bool_el@Base 0.13
- plist_add_sub_data_el@Base 0.13
- plist_add_sub_date_el@Base 0.13
- plist_add_sub_key_el@Base 0.13
- plist_add_sub_node@Base 0.13
- plist_add_sub_real_el@Base 0.13
- plist_add_sub_string_el@Base 0.13
- plist_add_sub_uint_el@Base 0.13
  plist_array_append_item@Base 0.16
  plist_array_get_item@Base 0.16
  plist_array_get_item_index@Base 0.16
@@ -18,7 +10,6 @@ libplist.so.1 libplist1 #MINVER#
  plist_array_set_item@Base 0.16
  plist_compare_node_value@Base 0.13
  plist_copy@Base 0.13
- plist_data_compare@Base 0.13
  plist_dict_get_item@Base 0.16
  plist_dict_get_item_key@Base 0.16
  plist_dict_get_size@Base 0.16
@@ -27,23 +18,15 @@ libplist.so.1 libplist1 #MINVER#
  plist_dict_next_item@Base 0.16
  plist_dict_remove_item@Base 0.16
  plist_dict_set_item@Base 0.16
- plist_find_node_by_key@Base 0.13
- plist_find_node_by_string@Base 0.13
  plist_free@Base 0.13
  plist_from_bin@Base 0.13
  plist_from_xml@Base 0.13
- plist_get_array_nth_el@Base 0.13
  plist_get_bool_val@Base 0.13
- plist_get_data@Base 0.13
  plist_get_data_val@Base 0.13
  plist_get_date_val@Base 0.13
- plist_get_dict_el_from_key@Base 0.13
- plist_get_first_child@Base 0.13
  plist_get_key_val@Base 0.13
- plist_get_next_sibling@Base 0.13
  plist_get_node_type@Base 0.13
  plist_get_parent@Base 0.13
- plist_get_prev_sibling@Base 0.13
  plist_get_real_val@Base 0.13
  plist_get_string_val@Base 0.13
  plist_get_uint_val@Base 0.13
@@ -52,8 +35,6 @@ libplist.so.1 libplist1 #MINVER#
  plist_new_data@Base 0.16
  plist_new_date@Base 0.16
  plist_new_dict@Base 0.13
- plist_new_node@Base 0.13
- plist_new_plist_data@Base 0.13
  plist_new_real@Base 0.16
  plist_new_string@Base 0.16
  plist_new_uint@Base 0.16

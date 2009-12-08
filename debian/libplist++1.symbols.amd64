@@ -1,4 +1,5 @@
 libplist++.so.1 libplist++1 #MINVER#
+ _ZN5PList10Dictionary10GetNodeKeyEPNS_4NodeE@Base 1.0-1
  _ZN5PList10Dictionary3EndEv@Base 0.16
  _ZN5PList10Dictionary4FindERKSs@Base 0.16
  _ZN5PList10Dictionary5BeginEv@Base 0.16
@@ -49,8 +50,9 @@ libplist++.so.1 libplist++1 #MINVER#
  _ZN5PList4DateaSERS0_@Base 0.16
  _ZN5PList4Node7GetTypeEv@Base 0.16
  _ZN5PList4Node8GetPlistEv@Base 0.16
+ _ZN5PList4Node9FromPlistEPvPS0_@Base 1.0-1
  _ZN5PList4Node9GetParentEv@Base 0.16
- _ZN5PList4Node9SetParentEPS0_@Base 0.16
+#MISSING: 1.0-1# _ZN5PList4Node9SetParentEPS0_@Base 0.16
  _ZN5PList4NodeC1E10plist_typePS0_@Base 0.16
  _ZN5PList4NodeC1EPS0_@Base 0.16
  _ZN5PList4NodeC1EPvPS0_@Base 0.16
@@ -75,6 +77,7 @@ libplist++.so.1 libplist++1 #MINVER#
  _ZN5PList4RealD1Ev@Base 0.16
  _ZN5PList4RealD2Ev@Base 0.16
  _ZN5PList4RealaSERS0_@Base 0.16
+ _ZN5PList5Array12GetNodeIndexEPNS_4NodeE@Base 1.0-1
  _ZN5PList5Array5CloneEv@Base 0.16
  _ZN5PList5Array6AppendEPNS_4NodeE@Base 0.16
  _ZN5PList5Array6InsertEPNS_4NodeEj@Base 0.16
@@ -91,9 +94,9 @@ libplist++.so.1 libplist++1 #MINVER#
  _ZN5PList5ArrayD2Ev@Base 0.16
  _ZN5PList5ArrayaSERS0_@Base 0.16
  _ZN5PList5ArrayixEj@Base 0.16
- _ZN5PList5Utils7FromBinERKSt6vectorIcSaIcEE@Base 0.16
- _ZN5PList5Utils7FromXmlERKSs@Base 0.16
- _ZN5PList5Utils9FromPlistEPvPNS_4NodeE@Base 0.16
+#MISSING: 1.0-1# _ZN5PList5Utils7FromBinERKSt6vectorIcSaIcEE@Base 0.16
+#MISSING: 1.0-1# _ZN5PList5Utils7FromXmlERKSs@Base 0.16
+#MISSING: 1.0-1# _ZN5PList5Utils9FromPlistEPvPNS_4NodeE@Base 0.16
  _ZN5PList6String5CloneEv@Base 0.16
  _ZN5PList6String8GetValueEv@Base 0.16
  _ZN5PList6String8SetValueERKSs@Base 0.16
@@ -139,8 +142,11 @@ libplist++.so.1 libplist++1 #MINVER#
  _ZN5PList7IntegerD1Ev@Base 0.16
  _ZN5PList7IntegerD2Ev@Base 0.16
  _ZN5PList7IntegeraSERS0_@Base 0.16
+ _ZN5PList9Structure16UpdateNodeParentEPNS_4NodeE@Base 1.0-1
  _ZN5PList9Structure5ToBinEv@Base 0.16
  _ZN5PList9Structure5ToXmlEv@Base 0.16
+ _ZN5PList9Structure7FromBinERKSt6vectorIcSaIcEE@Base 1.0-1
+ _ZN5PList9Structure7FromXmlERKSs@Base 1.0-1
  _ZN5PList9Structure7GetSizeEv@Base 0.16
  _ZN5PList9StructureC1E10plist_typePNS_4NodeE@Base 0.16
  _ZN5PList9StructureC1EPNS_4NodeE@Base 0.16

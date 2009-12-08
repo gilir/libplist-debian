@@ -5,6 +5,7 @@ libplist (1.0-1) UNRELEASED; urgency=low
   * debian/libpmist++-dev.install: Remove Utils.h, not shipped in the new 
     version.
   * debian/python-plist.install: Update to the new location.
+  * debian/*.symbols: Add symbols files.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Tue, 08 Dec 2009 19:58:57 +0100
 
