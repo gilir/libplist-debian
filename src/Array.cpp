@@ -20,7 +20,8 @@
 
 #include <stdlib.h>
 #include <plist/Array.h>
-#include <plist/Utils.h>
+
+#include <algorithm>
 
 namespace PList
 {
@@ -38,7 +39,7 @@ Array::Array(plist_t node, Node* parent) : Structure(parent)
     for (uint32_t i = 0; i < size; i++)
     {
         plist_t subnode = plist_array_get_item(_node, i);
-        _array.push_back(  Utils::FromPlist(subnode, this) );
+        _array.push_back(  Node::FromPlist(subnode, this) );
     }
 }
 
@@ -51,7 +52,7 @@ Array::Array(PList::Array& a) : Structure()
     for (uint32_t i = 0; i < size; i++)
     {
         plist_t subnode = plist_array_get_item(_node, i);
-        _array.push_back(  Utils::FromPlist(subnode, this) );
+        _array.push_back(  Node::FromPlist(subnode, this) );
     }
 }
 
@@ -70,7 +71,7 @@ Array& Array::operator=(PList::Array& a)
     for (uint32_t i = 0; i < size; i++)
     {
         plist_t subnode = plist_array_get_item(_node, i);
-        _array.push_back(  Utils::FromPlist(subnode, this) );
+        _array.push_back(  Node::FromPlist(subnode, this) );
     }
     return *this;
 }
@@ -99,7 +100,7 @@ void Array::Append(Node* node)
     if (node)
     {
         Node* clone = node->Clone();
-        clone->SetParent(this);
+        UpdateNodeParent(clone);
         plist_array_append_item(_node, clone->GetPlist());
         _array.push_back(clone);
     }
@@ -110,7 +111,7 @@ void Array::Insert(Node* node, unsigned int pos)
     if (node)
     {
         Node* clone = node->Clone();
-        clone->SetParent(this);
+        UpdateNodeParent(clone);
         plist_array_insert_item(_node, clone->GetPlist(), pos);
         std::vector<Node*>::iterator it = _array.begin();
         it += pos;
@@ -138,6 +139,12 @@ void Array::Remove(unsigned int pos)
     it += pos;
     delete _array.at(pos);
     _array.erase(it);
+}
+
+unsigned int Array::GetNodeIndex(Node* node)
+{
+    std::vector<Node*>::iterator it = std::find(_array.begin(), _array.end(), node);
+    return std::distance (_array.begin(), it);
 }
 
 };
