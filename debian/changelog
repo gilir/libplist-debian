@@ -2,6 +2,8 @@ libplist (1.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * debian/libplist*.install & debian/control: Bump SONAME version. 
+  * debian/libpmist++-dev.install: Remove Utils.h, not shipped in the new 
+    version.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Tue, 08 Dec 2009 19:58:57 +0100
 
