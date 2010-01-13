@@ -2,6 +2,8 @@ libplist (1.1-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * debian/rules & debian/control: Add quilt support.
+  * debian/01-libs.private.patch: Use Libs.private in *.pc files to not add
+    unecessary links.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Wed, 13 Jan 2010 23:32:14 +0100
 
