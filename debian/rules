@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+include /usr/share/quilt/quilt.make
+
 DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
@@ -24,12 +26,12 @@ configure-stamp:
 	touch $@
 
 build: build-stamp
-build-stamp: configure
+build-stamp: $(QUILT_STAMPFN) configure
 	dh_testdir
 	$(MAKE) -C $(BUILDDIR)
 	touch $@
 
-clean:
+clean: unpatch
 	dh_testdir
 	dh_testroot
 	[ ! -f Makefile ] || $(MAKE) clean
