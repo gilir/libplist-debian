@@ -20,7 +20,7 @@ configure_flags += \
 			-DCMAKE_SKIP_RPATH=true
 
 %:
-	dh --with-quilt $@
+	dh --with quilt $@
 
 override_dh_auto_configure:
 	dh_auto_configure -- 	$(configure_flags)
