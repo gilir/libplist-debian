@@ -15,20 +15,58 @@ else
 endif
 
 PYVER=$(shell pyversions -vr debian/control)
+BUILDDIR=$(CURDIR)/debian/build
 
-configure_flags += \
-			-DCMAKE_INSTALL_PREFIX="/usr" \
-			-DPYTHON_VERSION=$(PYVER) \
-			-DCMAKE_SKIP_RPATH=true
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	mkdir -p $(BUILDDIR)
+	cd $(BUILDDIR) && cmake ../.. -DCMAKE_INSTALL_PREFIX="/usr" \
+		-DPYTHON_VERSION=$(PYVER) -DCMAKE_SKIP_RPATH=true
+	touch $@
 
-%:
-	dh --with quilt $@
+build: build-stamp
+build-stamp: $(QUILT_STAMPFN) configure
+	dh_testdir
+	$(MAKE) -C $(BUILDDIR)
+	touch $@
 
-override_dh_auto_configure:
-	dh_auto_configure -- 	$(configure_flags)
+clean: unpatch
+	dh_testdir
+	dh_testroot
+	[ ! -f Makefile ] || $(MAKE) clean
+	rm -f build-stamp configure-stamp
+	rm -rf $(BUILDDIR)
+	dh_clean
 
-override_dh_install:
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	$(MAKE) -C $(BUILDDIR) DESTDIR=$(CURDIR)/debian/tmp install
+	mv $(CURDIR)/debian/tmp/usr/bin/plutil-* \
+		$(CURDIR)/debian/tmp/usr/bin/plutil
+
+binary-indep: build install
+
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installman
 	dh_install --fail-missing
-
-override_dh_strip:
+	dh_link
 	dh_strip --dbg-package=libplist-dbg
+	dh_compress
+	dh_fixperms
+	dh_pysupport
+	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure
