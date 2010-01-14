@@ -1,9 +1,15 @@
 libplist (1.1-1) UNRELEASED; urgency=low
 
   * New upstream release.
-  * debian/rules & debian/control: Add quilt support.
+  * debian/rules:
+   - Rewrite to use dh7 and quilt.
+  * debian/control:
+   - Bump build depends for debhelper (>= 7.0.50~) and quilt (>= 0.46-7).
   * debian/01-libs.private.patch: Use Libs.private in *.pc files to not add
     unecessary links.
+  * debian/patches/02-fix-test.patch: From upstream (54f1ffb...), fix test 
+    suit.
+  * debian/README.source: Add for quilt support.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Wed, 13 Jan 2010 23:32:14 +0100
 
