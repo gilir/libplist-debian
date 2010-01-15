@@ -1,16 +1,17 @@
-libplist (1.1-1) UNRELEASED; urgency=low
+libplist (1.1-1) unstable; urgency=low
 
   * New upstream release.
   * debian/rules 
    - Rewrite to use dh7 and quilt.
   * debian/control: 
    - Build-depends on debhelper (>= 7.0.50~) and quilt (>= 0.46-7).
+   - Add VCS-* field.
   * debian/01-libs.private.patch: Use Libs.private in *.pc files to not add
     unecessary links.
   * debian/02-fix-test.patch: From upstream (54f1ffb0...), fix test suit.
   * debian/README.source: Add for quilt support.
 
- -- Julien Lavergne <gilir@ubuntu.com>  Wed, 13 Jan 2010 23:32:14 +0100
+ -- Julien Lavergne <julien.lavergne@gmail.com>  Fri, 15 Jan 2010 01:24:54 +0100
 
 libplist (1.0-1) unstable; urgency=low
 

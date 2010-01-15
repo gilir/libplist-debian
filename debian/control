@@ -6,6 +6,8 @@ Standards-Version: 3.8.3
 Build-Depends: debhelper (>= 7.0.50~), quilt (>= 0.46-7), libglib2.0-dev, libxml2-dev, cmake, swig (>= 1.3.36), python-all-dev, python-support (>= 0.6.0)
 XS-Python-Version: current
 Homepage: http://github.com/JonathanBeck/libplist
+Vcs-Git: git://github.com/gilir/libplist-debian.git
+Vcs-Browser: http://github.com/gilir/libplist-debian/tree
 
 Package: libplist1
 Architecture: any
