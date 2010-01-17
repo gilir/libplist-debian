@@ -3,6 +3,8 @@ libplist (1.1-1) unstable; urgency=low
   * New upstream release.
   * debian/rules 
    - Rewrite to use dh7 and quilt.
+   - Remove -DCMAKE_SKIP_RPATH=true, tests won't work without it. RPATH will be
+     removed by patching upstream cmake system when it's needed.
   * debian/control: 
    - Build-depends on debhelper (>= 7.0.50~) and quilt (>= 0.46-7).
    - Add VCS-* fields.
