@@ -6,7 +6,8 @@ libplist (1.1-1) unstable; urgency=low
    - Remove -DCMAKE_SKIP_RPATH=true, tests won't work without it. RPATH will be
      removed by patching upstream cmake system when it's needed.
   * debian/control: 
-   - Build-depends on debhelper (>= 7.0.50~) and quilt (>= 0.46-7).
+   - Build-depends on debhelper (>= 7.0.50~) and quilt (>= 0.46-7) for dh7 and
+     quilt support.
    - Add VCS-* fields.
   * debian/01-libs.private.patch: Use Requires.private in *.pc files to not add
     unecessary links.
@@ -14,7 +15,7 @@ libplist (1.1-1) unstable; urgency=low
   * debian/03-remove-rpath.patch: Remove RPATH for python bindings.
   * debian/README.source: Add for quilt support.
 
- -- Julien Lavergne <julien.lavergne@gmail.com>  Fri, 15 Jan 2010 01:24:54 +0100
+ -- Julien Lavergne <julien.lavergne@gmail.com>  Mon, 18 Jan 2010 00:49:27 +0100
 
 libplist (1.0-1) unstable; urgency=low
 
