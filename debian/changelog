@@ -11,6 +11,7 @@ libplist (1.1-1) unstable; urgency=low
   * debian/01-libs.private.patch: Use Requires.private in *.pc files to not add
     unecessary links.
   * debian/02-fix-test.patch: From upstream (54f1ffb0...), fix test suit.
+  * debian/03-remove-rpath.patch: Remove RPATH for python bindings.
   * debian/README.source: Add for quilt support.
 
  -- Julien Lavergne <julien.lavergne@gmail.com>  Fri, 15 Jan 2010 01:24:54 +0100
