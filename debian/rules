@@ -16,8 +16,7 @@ PYVER=$(shell pyversions -vr debian/control)
 
 configure_flags += \
 			-DCMAKE_INSTALL_PREFIX="/usr" \
-			-DPYTHON_VERSION=$(PYVER) \
-			-DCMAKE_SKIP_RPATH=true
+			-DPYTHON_VERSION=$(PYVER)
 
 %:
 	dh --with quilt $@
