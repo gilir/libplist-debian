@@ -1,3 +1,2 @@
 version=3
-http://github.com/JonathanBeck/libplist/downloads \
-    http://cloud.github.com/downloads/JonathanBeck/libplist/libplist-([\d\.]+).tar.bz2
+http://githubredir.debian.net/github/JonathanBeck/libplist (.*).tar.gz
