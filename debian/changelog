@@ -1,7 +1,8 @@
 libplist (1.2-1) UNRELEASED; urgency=low
 
   * New upstream release (Closes: #568131)
-  * debian/watch: update with githubredir.debian.net 
+  * debian/watch: update with githubredir.debian.net
+  * debian/02-fix-test.patch: merged upstream.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 21 Mar 2010 18:46:25 +0100
 
