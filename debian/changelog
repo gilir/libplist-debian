@@ -4,6 +4,8 @@ libplist (1.2-1) UNRELEASED; urgency=low
   * debian/watch: update with githubredir.debian.net
   * debian/patches :
    - 02-fix-test.patch: merged upstream.
+   - 04-ftbfs-armel.patch: from Ubuntu, fix FTBFS for armel. Thanks Alexander
+     Sack for the patch. (Closes: #574623)
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 21 Mar 2010 18:46:25 +0100
 
