@@ -1,5 +1,6 @@
-libplist (1.1-2) UNRELEASED; urgency=low
+libplist (1.2-1) UNRELEASED; urgency=low
 
+  * New upstream release (Closes: #568131)
   * debian/watch: update with githubredir.debian.net 
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 21 Mar 2010 18:46:25 +0100
