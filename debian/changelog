@@ -6,6 +6,7 @@ libplist (1.2-1) unstable; urgency=low
    - 02-fix-test.patch: merged upstream.
   * debian/control: Bump Standards-Version to 3.8.4, no changes needed.
   * debian/rules: Make the test suit fatal on supported arch.
+  * Switch to dpkg-source 3.0 (quilt) format.
 
  -- Julien Lavergne <julien.lavergne@gmail.com>  Sun, 21 Mar 2010 18:46:25 +0100
 
