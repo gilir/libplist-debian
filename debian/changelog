@@ -10,7 +10,7 @@ libplist (1.2-1) unstable; urgency=low
    - debian/control: Remove quilt build-depends.
    - debian/rules: Remove --with quilt.
    - README.source: Remove.
-  * README.Debian: Add a not about the supported arches.
+  * README.Debian: Add a note about the supported arches.
 
  -- Julien Lavergne <julien.lavergne@gmail.com>  Sun, 21 Mar 2010 18:46:25 +0100
 
