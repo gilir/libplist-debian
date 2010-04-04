@@ -9,6 +9,7 @@ libplist (1.2-1) unstable; urgency=low
   * Switch to dpkg-source 3.0 (quilt) format.
    - debian/control: Remove quilt build-depends.
    - debian/rules: Remove --with quilt.
+   - README.source: Remove.
 
  -- Julien Lavergne <julien.lavergne@gmail.com>  Sun, 21 Mar 2010 18:46:25 +0100
 
