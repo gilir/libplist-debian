@@ -5,11 +5,12 @@ libplist (1.2-1) unstable; urgency=low
   * debian/patches :
    - 02-fix-test.patch: merged upstream.
   * debian/control: Bump Standards-Version to 3.8.4, no changes needed.
-  * debian/rules: Make the test suit fatal on supported arch.
+  * debian/rules: Make the test suit fatal on supported arches.
   * Switch to dpkg-source 3.0 (quilt) format.
    - debian/control: Remove quilt build-depends.
    - debian/rules: Remove --with quilt.
    - README.source: Remove.
+  * README.Debian: Add a not about the supported arches.
 
  -- Julien Lavergne <julien.lavergne@gmail.com>  Sun, 21 Mar 2010 18:46:25 +0100
 
