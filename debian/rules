@@ -19,7 +19,7 @@ configure_flags += \
 			-DPYTHON_VERSION=$(PYVER)
 
 %:
-	dh --with quilt $@
+	dh $@
 
 override_dh_auto_configure:
 	dh_auto_configure -- 	$(configure_flags)
