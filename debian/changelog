@@ -4,6 +4,8 @@ libplist (1.2-1) unstable; urgency=low
   * debian/watch: update with githubredir.debian.net
   * debian/patches :
    - 02-fix-test.patch: merged upstream.
+   - 04-ftbfs-armel.patch: from Ubuntu, fix FTBFS for armel. Thanks Alexander
+     Sack for the patch. (Closes: #574623)
   * debian/control: Bump Standards-Version to 3.8.4, no changes needed.
   * debian/rules: Make the test suit fatal on supported arches.
   * Switch to dpkg-source 3.0 (quilt) format.
