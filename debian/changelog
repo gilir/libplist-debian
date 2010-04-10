@@ -1,10 +1,10 @@
-libplist (1.2-3) UNRELEASED; urgency=medium
+libplist (1.2-3) unstable; urgency=medium
 
   * debian/patches/05-plist_endian+align_fixes.patch: Endianness, alignment and
     type-punning fixes for binary plist support. Thanks Julien BLACHE for the
     patch. (Closes: #570580).
 
- -- Julien Lavergne <gilir@ubuntu.com>  Sat, 10 Apr 2010 18:19:34 +0200
+ -- Julien Lavergne <julien.lavergne@gmail.com>  Sat, 10 Apr 2010 18:19:34 +0200
 
 libplist (1.2-2) unstable; urgency=low
 
