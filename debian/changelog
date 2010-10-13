@@ -4,6 +4,8 @@ libplist (1.3-2) UNRELEASED; urgency=low
    - Run the test suit for all arches.
   * debian/README.Debian:
    - Remove since we run the test suit on all arches.
+  * debian/watch:
+   - Fix the detection of the version, thanks Paul McEnery.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 27 Jun 2010 14:55:00 +0200
 
