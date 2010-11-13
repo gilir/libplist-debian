@@ -1,6 +1,7 @@
 libplist (1.3-3) UNRELEASED; urgency=low
 
   * Remove additional CFLAGS to pass correct flags.
+  * Add additional LDFLAGS.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sat, 13 Nov 2010 19:34:03 +0100
 
