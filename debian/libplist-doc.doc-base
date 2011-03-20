@@ -1,6 +1,6 @@
 Document: libplist
 Title: Libplist Reference Manual
-Authors: Libplist authors (see AUTHORS file)
+Author: Libplist authors (see AUTHORS file)
 Abstract:  libplist is a library for reading and writing the Apple binary and XML property lists format. It's part of the libiphone stack, providing access to Ipod and Iphone devices.
 Section: Mobile Devices
 

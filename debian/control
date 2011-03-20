@@ -104,7 +104,7 @@ Description: Apple property list converter
  access to Ipod and Iphone devices.
 
 Package: libplist-doc
-Section: docs
+Section: doc
 Architecture: all
 Depends: ${misc:Depends}
 Description: Library for handling Apple binary and XML property lists - docs
