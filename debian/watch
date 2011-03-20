@@ -1,2 +1,2 @@
 version=3
-http://githubredir.debian.net/github/JonathanBeck/libplist /v([\d\.].*).tar.gz
+http://libimobiledevice.org/ downloads/libplist-(.+)\.tar\.bz2
