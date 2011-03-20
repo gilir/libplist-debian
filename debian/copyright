@@ -1,9 +1,7 @@
-Authors:
- Jonathan Beck <jonabeck@gmail.com>
- Zach C.
- Martin Szulecki
- Nikias Bassen
-Download: http://github.com/JonathanBeck/libplist/downloads
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=173
+Upstream-Name: libplist
+Upstream-Contact: libimobiledevice-devel@lists.libimobiledevice.org
+Source: http://http://www.libimobiledevice.org/
 
 Files: *
 Copyright:

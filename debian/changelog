@@ -13,6 +13,8 @@ libplist (1.4-1) UNRELEASED; urgency=medium
    - Update location of the tarballs.
   * debian/docs
    - Add general documentation files.
+  * debian/copyright:
+   - Update to DEP5 format.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 20 Mar 2011 20:25:11 +0100
 
