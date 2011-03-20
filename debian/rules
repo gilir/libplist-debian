@@ -24,6 +24,10 @@ configure_flags += \
 override_dh_auto_configure:
 	dh_auto_configure -- 	$(configure_flags)
 
+override_dh_auto_build:
+	dh_auto_build
+	doxygen doxygen.cfg
+
 override_dh_install:
 	mv $(CURDIR)/debian/tmp/usr/bin/plutil-* \
 		$(CURDIR)/debian/tmp/usr/bin/plutil
@@ -31,6 +35,10 @@ override_dh_install:
 
 override_dh_strip:
 	dh_strip --dbg-package=libplist-dbg
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -Rf docs/
 
 #override_dh_auto_test:
 #Make the test suit fatal on supported arches (See README.Debian)

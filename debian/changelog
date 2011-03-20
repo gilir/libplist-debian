@@ -5,6 +5,7 @@ libplist (1.4-1) UNRELEASED; urgency=medium
    - Remove additional CFLAGS to pass correct flags.
    - Add additional LDFLAGS.
    - Use filter instead of findstring to find noopt.
+   - Build and clean doxygen documentation.
   * debian/libplist++1.symbols.amd64
    - Removed, since symbols are too unstable and easily FTBFS.
      Closes: #605846, #615661, #618150
