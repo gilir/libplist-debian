@@ -18,6 +18,8 @@ libplist (1.4-1) UNRELEASED; urgency=medium
    - Update to DEP5 format.
   * debian/01-libs.private.patch:
    - Update.
+  * debian/libplist-doc.doc-base & debian/libplist.install:
+   - Install libplist documentation. 
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 20 Mar 2011 20:25:11 +0100
 
