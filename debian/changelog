@@ -15,6 +15,8 @@ libplist (1.4-1) UNRELEASED; urgency=medium
    - Add general documentation files.
   * debian/copyright:
    - Update to DEP5 format.
+  * debian/01-libs.private.patch:
+   - Update.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 20 Mar 2011 20:25:11 +0100
 

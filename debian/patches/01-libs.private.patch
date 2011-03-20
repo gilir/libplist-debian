@@ -11,16 +11,3 @@ Index: libplist/libplist++.pc.in
  Libs: -L${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR} -lplist++
  Cflags: -I${CMAKE_INSTALL_PREFIX}/include
  
-Index: libplist/libplist.pc.in
-===================================================================
---- libplist.orig/libplist.pc.in	2010-01-13 23:36:14.000000000 +0100
-+++ libplist/libplist.pc.in	2010-01-13 23:36:38.000000000 +0100
-@@ -6,7 +6,7 @@
- Name: libplist
- Description: A library to handle Apple Property Lists whereas they are binary or XML
- Version: ${LIBPLIST_VERSION}
--Requires: libxml-2.0 >= 2.6.30 glib-2.0 >= 2.14.1
-+Requires.private: libxml-2.0 >= 2.6.30 glib-2.0 >= 2.14.1
- Libs: -L${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR} -lplist
- Cflags: -I${CMAKE_INSTALL_PREFIX}/include
- 
