@@ -23,6 +23,7 @@ libplist (1.4-1) UNRELEASED; urgency=medium
   * debian/control:
    - Build-depends on doxygen for documentation support.
    - Add libplist-doc binary.
+   - Replace references to libiphone by libimobiledevice.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 20 Mar 2011 20:25:11 +0100
 
