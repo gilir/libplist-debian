@@ -11,6 +11,8 @@ libplist (1.4-1) UNRELEASED; urgency=medium
   * Set urgency to medium to fix RC bug.
   * debian/watch:
    - Update location of the tarballs.
+  * debian/docs
+   - Add general documentation files.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 20 Mar 2011 20:25:11 +0100
 
