@@ -102,3 +102,14 @@ Description: Apple property list converter
  This package containt tools to convert Apple property list files from binary
  to XML and vice-versa. It's part of the libiphone stack, providing access
  to Ipod and Iphone devices.
+
+Package: libplist-doc
+Section: docs
+Architecture: all
+Depends: ${misc:Depends}
+Description: Library for handling Apple binary and XML property lists - docs
+ This package containt tools to convert Apple property list files from binary
+ to XML and vice-versa. It's part of the libiphone stack, providing access
+ to Ipod and Iphone devices.
+ .
+ This package contains the documentation.
