@@ -3,7 +3,10 @@ libplist (1.3-3) UNRELEASED; urgency=low
   * debian/rules:
    - Remove additional CFLAGS to pass correct flags.
    - Add additional LDFLAGS.
-   - Use filter instead of findstring to fing noopt.
+   - Use filter instead of findstring to find noopt.
+  * debian/libplist++1.symbols.amd64
+   - Removed, since symbols are too unstable and easily FTBFS.
+     Closes: #605846, #615661, #618150
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sat, 13 Nov 2010 19:34:03 +0100
 
