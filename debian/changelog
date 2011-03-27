@@ -6,6 +6,8 @@ libplist (1.4-2) UNRELEASED; urgency=low
    - Update Vcs-*.
    - Update Homepage.
    - Remove build-depends on python-support, to migrate to dh_python2.
+   - Bump build-depends on python-all-dev (>= 2.6.6-3~), for dh_python2
+     support.
   * debian/python-plist.preinst:
    - Remove after Squeeze release.
 
