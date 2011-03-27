@@ -13,7 +13,7 @@ Build-Depends: debhelper (>= 7.0.50~),
                python-support (>= 0.6.0),
                doxygen
 XS-Python-Version: current
-Homepage: http://github.com/JonathanBeck/libplist
+Homepage: http://www.libimobiledevice.org/
 Vcs-Git: git://git.debian.org/git/pkg-gtkpod/packages/libplist.git
 Vcs-Browser: http://git.debian.org/?p=pkg-gtkpod/packages/libplist.git
 
