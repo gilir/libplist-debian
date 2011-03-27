@@ -24,7 +24,7 @@ Depends: ${shlibs:Depends},
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libimobildevice stack, providing
- access to iDevices.
+ access to iDevices (iPod, iPhone, iPad ...).
 
 Package: libplist++1
 Architecture: any
@@ -33,7 +33,7 @@ Depends: ${shlibs:Depends},
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libimobildevice stack, providing
- access to iDevices.
+ access to iDevices (iPod, iPhone, iPad ...).
  .
  This library is the C++ implementation of the libplist API.
 
@@ -47,7 +47,7 @@ Depends: libplist1 (= ${binary:Version}),
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libimobildevice stack, providing
- access to iDevices.
+ access to iDevices (iPod, iPhone, iPad ...).
  .
  This package contains the development files.
 
@@ -62,7 +62,7 @@ Replaces: libplist-dev (<= 0.13.2)
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libimobildevice stack, providing
- access to iDevices.
+ access to iDevices (iPod, iPhone, iPad ...).
  .
  This package contains the development files of the liplist++0 library.
 
@@ -76,7 +76,7 @@ Depends: libplist1 (= ${binary:Version}),
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libimobildevice stack, providing
- access to iDevices.
+ access to iDevices (iPod, iPhone, iPad ...).
  .
  This package contains the debugging symbols.
 
@@ -90,7 +90,7 @@ Provides: ${python:Provides}
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libimobildevice stack, providing
- access to iDevices.
+ access to iDevices (iPod, iPhone, iPad ...).
  .
  This package contains the Python bindings
 
@@ -102,7 +102,7 @@ Depends: ${shlibs:Depends},
 Description: Apple property list converter
  This package containt tools to convert Apple property list files from binary
  to XML and vice-versa. It's part of the libimobildevice stack, providing
- access to iDevices.
+ access to iDevices (iPod, iPhone, iPad ...).
 
 Package: libplist-doc
 Section: doc
@@ -111,6 +111,6 @@ Depends: ${misc:Depends}
 Description: Library for handling Apple binary and XML property lists - docs
  This package containt tools to convert Apple property list files from binary
  to XML and vice-versa. It's part of the libimobildevice stack, providing
- access to iDevices.
+ access to iDevices (iPod, iPhone, iPad ...).
  .
  This package contains the documentation.
