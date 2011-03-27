@@ -13,8 +13,8 @@ Build-Depends: debhelper (>= 7.0.50~),
                doxygen
 XS-Python-Version: current
 Homepage: http://github.com/JonathanBeck/libplist
-Vcs-Git: git://github.com/gilir/libplist-debian.git
-Vcs-Browser: http://github.com/gilir/libplist-debian/tree
+Vcs-Git: git://git.debian.org/git/pkg-gtkpod/packages/libplist.git
+Vcs-Browser: http://git.debian.org/?p=pkg-gtkpod/packages/libplist.git
 
 Package: libplist1
 Architecture: any
