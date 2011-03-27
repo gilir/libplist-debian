@@ -85,7 +85,6 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends}
-Provides: ${python:Provides}
 Description: Library for handling Apple binary and XML property lists
  libplist is a library for reading and writing the Apple binary and XML
  property lists format. It's part of the libimobildevice stack, providing
