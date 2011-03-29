@@ -53,7 +53,7 @@ Description: Library for handling Apple binary and XML property lists
 Package: libplist++-dev
 Architecture: any
 Section: libdevel
-Depends: libplist1 (= ${binary:Version}),
+Depends: libplist++1 (= ${binary:Version}),
          libxml2-dev,
          libglib2.0-dev, ${misc:Depends}
 Conflicts: libplist-dev (<= 0.13.2)
