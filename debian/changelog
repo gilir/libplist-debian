@@ -12,6 +12,7 @@ libplist (1.4-2) UNRELEASED; urgency=low
    - Remove Provides.
    - Depends on libplist++1 for libplist++-dev, instead of libplist1
      (LP: #600338)
+   - Fix typo in description (Closes: #620864).
   * debian/python-plist.preinst:
    - Remove after Squeeze release.
   * debian/rules:
