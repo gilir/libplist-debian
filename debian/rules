@@ -12,7 +12,7 @@ else
     CFLAGS += -O2
 endif
 
-PYVER=$(shell pyversions -vrd)
+PYVER=$(shell pyversions -vd)
 
 configure_flags += \
 			-DCMAKE_INSTALL_PREFIX="/usr" \
@@ -32,6 +32,10 @@ override_dh_install:
 	mv $(CURDIR)/debian/tmp/usr/bin/plutil-* \
 		$(CURDIR)/debian/tmp/usr/bin/plutil
 	dh_install --fail-missing
+
+override_dh_python2:
+	# Only build for the current version of python, not all supported.
+	dh_python2 --no-guessing-versions
 
 override_dh_strip:
 	dh_strip --dbg-package=libplist-dbg

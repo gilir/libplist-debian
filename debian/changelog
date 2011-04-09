@@ -19,6 +19,8 @@ libplist (1.4-2) UNRELEASED; urgency=low
    - Use dh --with python2.
    - Parse only the default python version, we can only pass 1 version to
      configure.
+   - Pass --no-guessing-versions to dh_python2 to build only with default
+     python version.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Thu, 24 Mar 2011 22:26:38 +0100
 
