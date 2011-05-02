@@ -1,4 +1,4 @@
-libplist (1.4-2) UNRELEASED; urgency=low
+libplist (1.4-2) unstable; urgency=low
 
   * debian/control:
    - Add references to iDevices and some examples.
@@ -27,7 +27,7 @@ libplist (1.4-2) UNRELEASED; urgency=low
    - 04-Add-missing-include-cstddef-to-fix-FTBFS-with-GCC-4-6.patch:
      From Ubuntu, Fix FTBFS with GCC 4.6 Closes: #624868, #624988, LP: #765982
 
- -- Julien Lavergne <gilir@ubuntu.com>  Thu, 24 Mar 2011 22:26:38 +0100
+ -- Julien Lavergne <julien.lavergne@gmail.com>  Mon, 02 May 2011 22:54:20 +0200
 
 libplist (1.4-1) unstable; urgency=medium
 
