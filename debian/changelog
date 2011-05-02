@@ -23,6 +23,9 @@ libplist (1.4-2) UNRELEASED; urgency=low
      python version.
   * debian/gbp.conf:
    - Add.
+  * debian/patches/
+   - 04-Add-missing-include-cstddef-to-fix-FTBFS-with-GCC-4-6.patch:
+     From Ubuntu, Fix FTBFS with GCC 4.6 Closes: #624868, #624988, LP: #765982
 
  -- Julien Lavergne <gilir@ubuntu.com>  Thu, 24 Mar 2011 22:26:38 +0100
 

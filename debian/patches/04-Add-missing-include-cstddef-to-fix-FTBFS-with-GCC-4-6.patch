@@ -1,0 +1,25 @@
+From 2bd636a48f9cf590e6c702d99efa8d59208bd2d1 Mon Sep 17 00:00:00 2001
+From: Julien Lavergne <julien.lavergne@gmail.com>
+Date: Mon, 2 May 2011 22:20:07 +0200
+Subject: [PATCH] Add missing include <cstddef> to fix FTBFS with GCC 4.6
+ Patch from Matthias Klose <doko@ubuntu.com>
+
+---
+ swig/plist.i |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/swig/plist.i b/swig/plist.i
+index 2458f39..172a330 100644
+--- a/swig/plist.i
++++ b/swig/plist.i
+@@ -4,6 +4,7 @@
+  %{
+  /* Includes the header in the wrapper code */
+  #include <plist/plist++.h>
++ #include <cstddef>
+  %}
+ 
+ %include "std_string.i"
+-- 
+1.7.4.1
+
