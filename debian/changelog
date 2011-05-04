@@ -14,6 +14,7 @@ libplist (1.4-2) unstable; urgency=low
      (LP: #600338)
    - Fix typo in description (Closes: #620864).
    - Bump Standards-Version to 3.9.2 (no change needed).
+   - Add depends on libjs-jquery for libplist-doc.
   * debian/python-plist.preinst:
    - Remove after Squeeze release.
   * debian/rules:

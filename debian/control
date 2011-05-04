@@ -105,7 +105,8 @@ Description: Apple property list converter
 Package: libplist-doc
 Section: doc
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
+         libjs-jquery
 Description: Library for handling Apple binary and XML property lists - docs
  This package containt tools to convert Apple property list files from binary
  to XML and vice-versa. It's part of the libimobiledevice stack, providing
