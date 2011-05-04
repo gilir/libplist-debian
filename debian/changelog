@@ -13,6 +13,7 @@ libplist (1.4-2) unstable; urgency=low
    - Depends on libplist++1 for libplist++-dev, instead of libplist1
      (LP: #600338)
    - Fix typo in description (Closes: #620864).
+   - Bump Standards-Version to 3.9.2 (no change needed).
   * debian/python-plist.preinst:
    - Remove after Squeeze release.
   * debian/rules:

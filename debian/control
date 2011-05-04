@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: gtkpod Maintainers <pkg-gtkpod-devel@lists.alioth.debian.org>
 Uploaders: Julien Lavergne <julien.lavergne@gmail.com>
-Standards-Version: 3.9.1.0
+Standards-Version: 3.9.2
 Build-Depends: debhelper (>= 7.0.50~), 
                libglib2.0-dev,
                libxml2-dev,
