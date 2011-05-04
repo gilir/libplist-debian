@@ -27,6 +27,8 @@ libplist (1.4-2) unstable; urgency=low
   * debian/patches/
    - 04-Add-missing-include-cstddef-to-fix-FTBFS-with-GCC-4-6.patch:
      From Ubuntu, Fix FTBFS with GCC 4.6 Closes: #624868, #624988, LP: #765982
+  * debian/libplist.links:
+   - Symlink jquery.js to the one available in Debian.
 
  -- Julien Lavergne <julien.lavergne@gmail.com>  Mon, 02 May 2011 22:54:20 +0200
 
