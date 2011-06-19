@@ -1,4 +1,34 @@
 libplist.so.1 libplist1 #MINVER#
+ iterator_bind@Base 1.5
+ iterator_create@Base 1.5
+ iterator_destroy@Base 1.5
+ iterator_next@Base 1.5
+ list_add@Base 1.5
+ list_destroy@Base 1.5
+ list_init@Base 1.5
+ list_remove@Base 1.5
+ node_attach@Base 1.5
+ node_child_position@Base 1.5
+ node_copy_deep@Base 1.5
+ node_create@Base 1.5
+ node_debug@Base 1.5
+ node_destroy@Base 1.5
+ node_detach@Base 1.5
+ node_first_child@Base 1.5
+ node_insert@Base 1.5
+ node_iterator_bind@Base 1.5
+ node_iterator_create@Base 1.5
+ node_iterator_destroy@Base 1.5
+ node_iterator_next@Base 1.5
+ node_list_add@Base 1.5
+ node_list_create@Base 1.5
+ node_list_destroy@Base 1.5
+ node_list_insert@Base 1.5
+ node_list_remove@Base 1.5
+ node_n_children@Base 1.5
+ node_next_sibling@Base 1.5
+ node_nth_child@Base 1.5
+ node_prev_sibling@Base 1.5
  plist_access_path@Base 0.16
  plist_access_pathv@Base 0.16
  plist_array_append_item@Base 0.16
@@ -48,3 +78,4 @@ libplist.so.1 libplist1 #MINVER#
  plist_set_uint_val@Base 0.13
  plist_to_bin@Base 0.13
  plist_to_xml@Base 0.13
+ plist_utf8_to_utf16@Base 1.5

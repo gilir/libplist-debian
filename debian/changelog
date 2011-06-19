@@ -7,6 +7,8 @@ libplist (1.5-1) UNRELEASED; urgency=low
    - Remove build-depends and depends of libglib2.0-dev.
   * debian/copyright:
    - Update copyright holders.
+  * debian/libplist1.symbols:
+   - Add new symbols.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 19 Jun 2011 15:36:36 +0200
 
