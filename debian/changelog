@@ -5,6 +5,8 @@ libplist (1.5-1) UNRELEASED; urgency=low
    - Remove, merged upstream.
   * debian/control:
    - Remove build-depends and depends of libglib2.0-dev.
+  * debian/copyright:
+   - Update copyright holders.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 19 Jun 2011 15:36:36 +0200
 
