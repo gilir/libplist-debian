@@ -1,7 +1,7 @@
 PROJECT( libplist )
 
 SET( LIBPLIST_VERSION_MAJOR "1" )
-SET( LIBPLIST_VERSION_MINOR "4" )
+SET( LIBPLIST_VERSION_MINOR "5" )
 SET( LIBPLIST_SOVERSION "1" )
 SET( LIBPLIST_VERSION "${LIBPLIST_VERSION_MAJOR}.${LIBPLIST_VERSION_MINOR}" )
 SET( LIBPLIST_LIBVERSION "${LIBPLIST_SOVERSION}.${LIBPLIST_VERSION}" )
@@ -16,7 +16,6 @@ IF(NOT DEFINED CMAKE_INSTALL_LIBDIR)
 ENDIF(NOT DEFINED CMAKE_INSTALL_LIBDIR)
 
 FIND_PACKAGE( LibXml2 REQUIRED )
-FIND_PACKAGE( GLIB2 REQUIRED )
 
 OPTION(ENABLE_PYTHON "Enable Python bindings (needs Swig)" ON)
 
@@ -31,6 +30,16 @@ INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/include
 
 ENABLE_TESTING()
 
+IF (NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/libcnary/CMakeLists.txt")
+  MESSAGE(FATAL_ERROR "
+You need to checkout the 'libcnary' submodule to build libplist.
+To do so, perform the following steps in the base directory:
+  git submodule init
+  git submodule update
+Then, run cmake again.")
+ENDIF()
+
+ADD_SUBDIRECTORY( libcnary )
 ADD_SUBDIRECTORY( src )
 ADD_SUBDIRECTORY( plutil )
 ADD_SUBDIRECTORY( include )
@@ -39,6 +48,10 @@ ADD_SUBDIRECTORY( test )
 IF ( SWIG_FOUND AND PYTHONLIBS_FOUND AND PYTHONINTERP_FOUND )
 	ADD_SUBDIRECTORY( swig )
 ENDIF ( SWIG_FOUND AND PYTHONLIBS_FOUND AND PYTHONINTERP_FOUND )
+
+INCLUDE (TestBigEndian)
+TEST_BIG_ENDIAN(endianess)
+SET ( PLIST_BYTE_ORDER ${endianess} )
 
 # add uninstall target
 CONFIGURE_FILE(	"${CMAKE_SOURCE_DIR}/cmake/modules/cmake_uninstall.cmake.in" "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake" IMMEDIATE @ONLY)
