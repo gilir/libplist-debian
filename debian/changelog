@@ -3,6 +3,8 @@ libplist (1.5-1) UNRELEASED; urgency=low
   * New upstream release.
   * 04-Add-missing-include-cstddef-to-fix-FTBFS-with-GCC-4-6.patch:
    - Remove, merged upstream.
+  * debian/control:
+   - Remove build-depends and depends of libglib2.0-dev.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 19 Jun 2011 15:36:36 +0200
 
