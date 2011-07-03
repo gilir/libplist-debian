@@ -43,6 +43,7 @@ override_dh_strip:
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -Rf docs/
+	rm -f test/data/*.out
 
 #override_dh_auto_test:
 #Make the test suit fatal on supported arches (See README.Debian)

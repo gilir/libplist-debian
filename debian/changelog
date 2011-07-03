@@ -10,6 +10,8 @@ libplist (1.6-1) UNRELEASED; urgency=low
    - Update copyright holders.
   * debian/libplist1.symbols:
    - Add new symbols.
+  * debian/rules:
+   - Clean generated files by tests (Closes: #632057)
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 19 Jun 2011 15:36:36 +0200
 
