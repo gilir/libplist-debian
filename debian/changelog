@@ -6,14 +6,15 @@ libplist (1.6-1) unstable; urgency=low
   * debian/control:
    - Remove build-depends and depends of libglib2.0-dev.
    - Add DM-Upload-Allowed: yes
-   - Build-depends on cmake (>= 2.8.4) for building multiple python extensions.
+   - Build-depends on cmake (>= 2.8.4) for building the correct python
+     extension.
   * debian/copyright:
    - Update copyright holders.
   * debian/libplist1.symbols:
    - Add new symbols.
   * debian/rules:
-   - Clean generated files by tests (Closes: #632057)
-   - Build multiple python extensions. Thanks Jakub Wilk for the patch.
+   - Clean generated files by the tests (Closes: #632057)
+   - Build the correct python extension. Thanks Jakub Wilk for the patch.
      (Closes: #632056)
 
  -- Julien Lavergne <julien.lavergne@gmail.com>  Sun, 03 Jul 2011 22:00:50 +0200
