@@ -13,6 +13,8 @@ libplist (1.6-1) UNRELEASED; urgency=low
    - Add new symbols.
   * debian/rules:
    - Clean generated files by tests (Closes: #632057)
+   - Build multiple python extensions. Thanks Jakub Wilk for the patch.
+     (Closes: #632056)
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 19 Jun 2011 15:36:36 +0200
 

@@ -16,7 +16,7 @@ PYVER=$(shell pyversions -vd)
 
 configure_flags += \
 			-DCMAKE_INSTALL_PREFIX="/usr" \
-			-DPYTHON_VERSION=$(PYVER)
+			-DPython_ADDITIONAL_VERSIONS=$(PYVER)
 
 %:
 	dh --with python2 $@
