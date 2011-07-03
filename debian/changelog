@@ -1,4 +1,4 @@
-libplist (1.6-1) UNRELEASED; urgency=low
+libplist (1.6-1) unstable; urgency=low
 
   * New upstream release.
   * 04-Add-missing-include-cstddef-to-fix-FTBFS-with-GCC-4-6.patch:
@@ -16,7 +16,7 @@ libplist (1.6-1) UNRELEASED; urgency=low
    - Build multiple python extensions. Thanks Jakub Wilk for the patch.
      (Closes: #632056)
 
- -- Julien Lavergne <gilir@ubuntu.com>  Sun, 19 Jun 2011 15:36:36 +0200
+ -- Julien Lavergne <gilir@ubuntu.com>  Sun, 03 Jul 2011 21:11:59 +0200
 
 libplist (1.4-2) unstable; urgency=low
 
