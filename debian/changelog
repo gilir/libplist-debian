@@ -1,4 +1,4 @@
-libplist (1.5-1) UNRELEASED; urgency=low
+libplist (1.6-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * 04-Add-missing-include-cstddef-to-fix-FTBFS-with-GCC-4-6.patch:
