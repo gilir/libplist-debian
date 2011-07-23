@@ -1,7 +1,9 @@
-libplist (1.6-2) UNRELEASED; urgency=low
+libplist (1.6-2) UNRELEASED; urgency=medium
 
   * debian/README.Debian :
    - Add to mention supported archs.
+  * debian/rules:
+   - Only run the test suit on supported archs. (Closes: #633457).
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sat, 23 Jul 2011 14:31:19 +0200
 

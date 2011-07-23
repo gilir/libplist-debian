@@ -45,10 +45,10 @@ override_dh_auto_clean:
 	rm -Rf docs/
 	rm -f test/data/*.out
 
-#override_dh_auto_test:
+override_dh_auto_test:
 #Make the test suit fatal on supported arches (See README.Debian)
-#ifneq (,$(filter $(DEB_HOST_ARCH),amd64 i386 kfreebsd-amd64 kfreebsd-amd64))
-#	dh_auto_test
-#else
-#	dh_auto_test || true
-#endif
+ifneq (,$(filter $(DEB_HOST_ARCH),amd64 i386 kfreebsd-amd64 kfreebsd-amd64))
+	dh_auto_test
+else
+	dh_auto_test || true
+endif
