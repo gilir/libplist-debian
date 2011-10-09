@@ -5,6 +5,8 @@ libplist (1.7-1) UNRELEASED; urgency=low
    - Run tests on all arches. 
   * debian/README.Debian:
    - Remove, since tests suit run on all arches.
+  * debian/copyright:
+   - Fix DEP5 format.
 
  -- Julien Lavergne <julien.lavergne@gmail.com>  Sun, 09 Oct 2011 23:28:01 +0200
 
