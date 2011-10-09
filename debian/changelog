@@ -1,5 +1,6 @@
 libplist (1.7-1) UNRELEASED; urgency=low
 
+  * New upstream release.
   * debian/rules:
    - Run tests on all arches. 
 
