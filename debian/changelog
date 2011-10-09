@@ -1,3 +1,9 @@
+libplist (1.7-1) UNRELEASED; urgency=low
+
+  *  
+
+ -- Julien Lavergne <gilir@ubuntu.com>  Sun, 09 Oct 2011 23:28:01 +0200
+
 libplist (1.6-2) unstable; urgency=medium
 
   * debian/README.Debian :
