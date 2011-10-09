@@ -1,6 +1,7 @@
 libplist (1.7-1) UNRELEASED; urgency=low
 
-  *  
+  * debian/rules:
+   - Run tests on all arches. 
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sun, 09 Oct 2011 23:28:01 +0200
 
