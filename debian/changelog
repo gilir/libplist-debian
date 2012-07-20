@@ -5,6 +5,7 @@ libplist (1.8-2) UNRELEASED; urgency=low
      by cython.
    - Build-depends on debhelper (>= 9.20120417~) to fix hardening with cmake.
    - Build-depends on chrpath.
+   - Update to Standards-Version: 3.9.3, no change needed.
   * debian/python-plist.install:
    - Update files installed by cython.
   * debian/libplist++-dev.install:
