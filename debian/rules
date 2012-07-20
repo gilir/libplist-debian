@@ -16,6 +16,7 @@ PYVER=$(shell pyversions -vd)
 
 configure_flags += \
 			-DCMAKE_INSTALL_PREFIX="/usr" \
+			-DCMAKE_SKIP_RPATH=true \
 			-DPython_ADDITIONAL_VERSIONS=$(PYVER)
 
 %:
