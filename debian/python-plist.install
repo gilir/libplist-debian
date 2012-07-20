@@ -1,1 +1,3 @@
-usr/lib/python*/*-packages/plist
+usr/lib/python*/*-packages/*.so
+usr/lib/python*/*-packages/*.py
+usr/include/plist/cython/plist.pxd

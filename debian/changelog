@@ -3,6 +3,8 @@ libplist (1.8-2) UNRELEASED; urgency=low
   * debian/control:
    - Replace build-depends on swig by cython, to enable python bindings made
      by cython.
+  * debian/python-plist.install:
+   - Update files installed by cython.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Fri, 20 Jul 2012 01:50:19 +0200
 
