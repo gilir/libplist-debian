@@ -20,7 +20,7 @@ configure_flags += \
 			-DPython_ADDITIONAL_VERSIONS=$(PYVER)
 
 %:
-	dh --with python2 $@
+	dh $@ --with python2
 
 override_dh_auto_configure:
 	dh_auto_configure -- 	$(configure_flags)
