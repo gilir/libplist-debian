@@ -9,7 +9,8 @@ Build-Depends: debhelper (>= 9.20120417~),
                cmake (>= 2.8.4),
                cython,
                python-all-dev (>= 2.6.6-3~),
-               doxygen
+               doxygen,
+               chrpath
 X-Python-Version: >= 2.5
 Homepage: http://www.libimobiledevice.org/
 Vcs-Git: git://git.debian.org/git/pkg-gtkpod/packages/libplist.git
