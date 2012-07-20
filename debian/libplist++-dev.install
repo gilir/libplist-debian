@@ -10,6 +10,4 @@ usr/include/plist/Data.h
 usr/include/plist/Dictionary.h
 usr/include/plist/plist++.h
 usr/include/plist/Integer.h
-usr/include/plist/swig
-usr/include/plist/swig/*
 usr/lib/pkgconfig/libplist++.pc
