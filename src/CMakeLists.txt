@@ -19,6 +19,8 @@ SET(libplist++_SRC
 	String.cpp
 	Date.cpp
 	Data.cpp
+	Key.cpp
+	Uid.cpp
 	Structure.cpp
 	Array.cpp
 	Dictionary.cpp
