@@ -13,7 +13,7 @@ Build-Depends: debhelper (>= 9.20120417~),
                chrpath
 X-Python-Version: >= 2.5
 Homepage: http://www.libimobiledevice.org/
-Vcs-Git: git://git.debian.org/git/pkg-gtkpod/packages/libplist.git
+Vcs-Git: git://git.debian.org/git/pkg-gtkpod/packages/libplist.git -b debian
 Vcs-Browser: http://git.debian.org/?p=pkg-gtkpod/packages/libplist.git
 DM-Upload-Allowed: yes
 
