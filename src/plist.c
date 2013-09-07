@@ -67,10 +67,10 @@ static void plist_free_data(plist_data_t data)
     }
 }
 
-static void plist_free_node(node_t* node)
+static int plist_free_node(node_t* node)
 {
     plist_data_t data = NULL;
-    node_detach(node->parent, node);
+    int index = node_detach(node->parent, node);
     data = plist_get_data(node);
     plist_free_data(data);
     node->data = NULL;
@@ -83,6 +83,8 @@ static void plist_free_node(node_t* node)
     node_iterator_destroy(ni);
 
     node_destroy(node);
+
+    return index;
 }
 
 plist_t plist_new_dict(void)
@@ -131,6 +133,15 @@ plist_t plist_new_uint(uint64_t val)
 {
     plist_data_t data = plist_new_plist_data();
     data->type = PLIST_UINT;
+    data->intval = val;
+    data->length = sizeof(uint64_t);
+    return plist_new_node(data);
+}
+
+plist_t plist_new_uid(uint64_t val)
+{
+    plist_data_t data = plist_new_plist_data();
+    data->type = PLIST_UID;
     data->intval = val;
     data->length = sizeof(uint64_t);
     return plist_new_node(data);
@@ -264,9 +275,12 @@ void plist_array_set_item(plist_t node, plist_t item, uint32_t n)
         plist_t old_item = plist_array_get_item(node, n);
         if (old_item)
         {
-            plist_free_node(old_item);
-            old_item = NULL;
-            plist_copy_node(item, &old_item);
+            int idx = plist_free_node(old_item);
+	    if (idx < 0) {
+		node_attach(node, item);
+	    } else {
+		node_insert(node, idx, item);
+	    }
         }
     }
     return;
@@ -393,12 +407,15 @@ void plist_dict_set_item(plist_t node, const char* key, plist_t item)
 {
     if (node && PLIST_DICT == plist_get_node_type(node))
     {
-        plist_t old_item = plist_dict_get_item(node, key);
+        node_t* old_item = plist_dict_get_item(node, key);
         if (old_item)
         {
-            plist_free_node(old_item);
-            old_item = NULL;
-            plist_copy_node(item, &old_item);
+            int idx = plist_free_node(old_item);
+	    if (idx < 0) {
+		node_attach(node, item);
+	    } else {
+		node_insert(node, idx, item);
+	    }
         }
     }
     return;
@@ -482,6 +499,7 @@ static void plist_get_type_and_value(plist_t node, plist_type * type, void *valu
         *((char *) value) = data->boolval;
         break;
     case PLIST_UINT:
+    case PLIST_UID:
         *((uint64_t *) value) = data->intval;
         break;
     case PLIST_REAL:
@@ -559,6 +577,15 @@ void plist_get_uint_val(plist_t node, uint64_t * val)
     assert(length == sizeof(uint64_t));
 }
 
+void plist_get_uid_val(plist_t node, uint64_t * val)
+{
+    plist_type type = plist_get_node_type(node);
+    uint64_t length = 0;
+    if (PLIST_UID == type)
+        plist_get_type_and_value(node, &type, (void *) val, &length);
+    assert(length == sizeof(uint64_t));
+}
+
 void plist_get_real_val(plist_t node, double *val)
 {
     plist_type type = plist_get_node_type(node);
@@ -609,6 +636,7 @@ int plist_data_compare(const void *a, const void *b)
     case PLIST_BOOLEAN:
     case PLIST_UINT:
     case PLIST_REAL:
+    case PLIST_UID:
         if (val_a->intval == val_b->intval)	//it is an union so this is sufficient
             return TRUE;
         else
@@ -622,6 +650,8 @@ int plist_data_compare(const void *a, const void *b)
             return FALSE;
 
     case PLIST_DATA:
+        if (val_a->length != val_b->length)
+            return FALSE;
         if (!memcmp(val_a->buff, val_b->buff, val_a->length))
             return TRUE;
         else
@@ -682,6 +712,7 @@ static void plist_set_element_val(plist_t node, plist_type type, const void *val
         data->boolval = *((char *) value);
         break;
     case PLIST_UINT:
+    case PLIST_UID:
         data->intval = *((uint64_t *) value);
         break;
     case PLIST_REAL:
@@ -720,6 +751,7 @@ void plist_set_type(plist_t node, plist_type type)
             data->length = sizeof(uint8_t);
             break;
         case PLIST_UINT:
+        case PLIST_UID:
             data->length = sizeof(uint64_t);
             break;
         case PLIST_REAL:
@@ -753,6 +785,11 @@ void plist_set_bool_val(plist_t node, uint8_t val)
 void plist_set_uint_val(plist_t node, uint64_t val)
 {
     plist_set_element_val(node, PLIST_UINT, &val, sizeof(uint64_t));
+}
+
+void plist_set_uid_val(plist_t node, uint64_t val)
+{
+    plist_set_element_val(node, PLIST_UID, &val, sizeof(uint64_t));
 }
 
 void plist_set_real_val(plist_t node, double val)
