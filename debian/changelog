@@ -6,6 +6,8 @@ libplist (1.10-1) UNRELEASED; urgency=low
      completly.
   * debian/libplist++-dev.install:
    - Install new files.
+  * debian/libplist1.symbols:
+   - Update symbols.
 
  -- Julien Lavergne <gilir@ubuntu.com>  Sat, 07 Sep 2013 09:59:52 +0200
 
